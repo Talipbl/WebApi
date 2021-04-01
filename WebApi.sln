@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDataAccess", "ApiDataAccess\ApiDataAccess.csproj", "{ED80B29F-1E60-400B-9CA4-DF7600D5C61D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcUi", "MvcUi\MvcUi.csproj", "{83C5A82B-0ABE-4752-9DFB-C95E6834514E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WfaUi", "WfaUi\WfaUi.csproj", "{DB434782-0221-472D-9C9D-AC4DF8DE44BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED80B29F-1E60-400B-9CA4-DF7600D5C61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED80B29F-1E60-400B-9CA4-DF7600D5C61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED80B29F-1E60-400B-9CA4-DF7600D5C61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED80B29F-1E60-400B-9CA4-DF7600D5C61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C5A82B-0ABE-4752-9DFB-C95E6834514E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C5A82B-0ABE-4752-9DFB-C95E6834514E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C5A82B-0ABE-4752-9DFB-C95E6834514E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C5A82B-0ABE-4752-9DFB-C95E6834514E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB434782-0221-472D-9C9D-AC4DF8DE44BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB434782-0221-472D-9C9D-AC4DF8DE44BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB434782-0221-472D-9C9D-AC4DF8DE44BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB434782-0221-472D-9C9D-AC4DF8DE44BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42299F37-E3AC-4457-BDFA-C8BBFD1F64A7}
+	EndGlobalSection
+EndGlobal
