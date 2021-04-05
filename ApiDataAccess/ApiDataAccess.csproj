@@ -111,6 +111,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataTransferObjects\CategoryDTO.cs" />
     <Compile Include="Models\DataTransferObjects\ProductDTO.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>

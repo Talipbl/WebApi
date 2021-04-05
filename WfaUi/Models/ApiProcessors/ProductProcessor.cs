@@ -11,27 +11,54 @@ namespace WfaUi.Models.ApiProcessors
     class ProductProcessor
     {
         string _url = "https://localhost:44339/api/products/";
-        public async List<Product> GetProducts()
+        public async Task<List<Product>> GetProducts()
         {
             string currentUrl = $"{_url}get";
             HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(currentUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                List<Product> products = await response.Content.ReadAsAsync<List<Product>>();
+                return products;
+            }
+            else
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
         }
-        public Product GetProduct(int id)
+        public async Task<Product> GetProduct(int id)
         {
-            string activeUrl = $"{_url}get/{id}";
+            string currentUrl = $"{_url}get/{id}";
+            HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(currentUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                Product product = await response.Content.ReadAsAsync<Product>();
+                return product;
+            }
+            else
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
         }
 
-        public bool AddProduct(Product product)
+        public async Task<bool> AddProduct(Product product)
         {
+            string currentUrl = $"{_url}post";
+            HttpResponseMessage response = await ApiHelper.ApiClient.PostAsJsonAsync(currentUrl, product);
+            return response.IsSuccessStatusCode;
 
         }
-        public bool UpdateProduct(Product product)
+        public async Task<bool> UpdateProduct(Product product)
         {
-
+            string currentUrl = $"{_url}put";
+            HttpResponseMessage response = await ApiHelper.ApiClient.PutAsJsonAsync(currentUrl, product);
+            return response.IsSuccessStatusCode;
         }
-        public bool DeleteProduct(int id)
-        {
 
+        public async Task<bool> DeleteProduct(int id)
+        {
+            string currentUrl = $"{_url}delete?id={id}";
+            HttpResponseMessage response = await ApiHelper.ApiClient.DeleteAsync(currentUrl);
+            return response.IsSuccessStatusCode;
         }
     }
 }
